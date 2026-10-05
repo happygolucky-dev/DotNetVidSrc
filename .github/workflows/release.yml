@@ -36,5 +36,5 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh release create "${GITHUB_REF_NAME}" artifacts/*.nupkg \
-            --title "VidSrc ${GITHUB_REF_NAME}" \
+            --title "DotNetVidSrc ${GITHUB_REF_NAME}" \
             --generate-notes
