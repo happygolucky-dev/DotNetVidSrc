@@ -1,0 +1,75 @@
+# ── .NET build output ──────────────────────────────────────────────
+bin/
+obj/
+out/
+[Bb]uild/
+[Ll]og/
+[Ll]ogs/
+artifacts/
+publish/
+*.nupkg
+*.snupkg
+!**/packages/**/*.nupkg
+
+# ── Test results / coverage ────────────────────────────────────────
+[Tt]est[Rr]esult*/
+*.trx
+*.coverage
+*.coveragexml
+coverage*.json
+coverage*.xml
+coverage*.info
+TestResults/
+BenchmarkDotNet.Artifacts/
+
+# ── Rider / Visual Studio / VS Code ────────────────────────────────
+.idea/
+.vs/
+.vscode/
+*.user
+*.userosscache
+*.suo
+*.userprefs
+*.sln.docstates
+*.DotSettings.user
+
+# ── .NET tooling ───────────────────────────────────────────────────
+project.lock.json
+project.fragment.lock.json
+*.nuget.props
+*.nuget.targets
+.nuget/
+.dotnet/
+*.dotCover
+*.pidb
+*.svclog
+*.scc
+
+# ── OS cruft ───────────────────────────────────────────────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ── Secrets / local config ─────────────────────────────────────────
+*.env
+.env.*
+!.env.example
+secrets.json
+appsettings.*.local.json
+*.pfx
+*.key
+*.pem
+
+# ── Misc ───────────────────────────────────────────────────────────
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
+nohup.out
