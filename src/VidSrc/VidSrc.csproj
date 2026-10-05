@@ -8,10 +8,13 @@
 
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
 
-    <PackageId>VidSrc</PackageId>
-    <Version>1.0.0</Version>
+    <PackageId>DotNetVidSrc</PackageId>
+    <Version>1.0.1</Version>
     <Description>.NET API wrapper for VidSrc (vidsrc.sh): embed URL builder, content info, latest-content and ID-list endpoints.</Description>
-    <Authors>NatePlayer</Authors>
+    <Authors>HappyGoLucky Dev</Authors>
+    <PackageProjectUrl>https://github.com/happygolucky-dev/DotNetVidSrc</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/happygolucky-dev/DotNetVidSrc.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
     <PackageTags>vidsrc;streaming;embed;movies;tv</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>

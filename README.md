@@ -1,6 +1,12 @@
-# VidSrc
+# DotNetVidSrc
 
 A .NET 10 API wrapper for [VidSrc](https://vidsrc.sh/vidsrc/docs/) — no API key required.
+
+```
+dotnet add package DotNetVidSrc
+```
+
+*(Hosted on GitHub Packages — see "Installing" below for the one-time feed setup.)*
 
 Covers the full public surface:
 
@@ -9,6 +15,22 @@ Covers the full public surface:
 - **Latest content** endpoints (`/movies|tvshows|episodes/latest/page-N.json`), including auto-paginating streams
 - **ID lists** (`/ids/*.txt`)
 - **Player event model** for hosts embedding the iframe (`postMessage` `PLAYER_EVENT` payloads)
+
+## Installing
+
+The package is published to GitHub Packages, which requires a one-time authenticated
+feed setup (any GitHub account + a PAT with the `read:packages` scope):
+
+```bash
+dotnet nuget add source https://nuget.pkg.github.com/happygolucky-dev/index.json \
+  --name happygolucky --username YOUR_GITHUB_USERNAME --password YOUR_PAT
+
+dotnet add package DotNetVidSrc
+```
+
+No GitHub account? Download the `.nupkg` from the
+[latest release](https://github.com/happygolucky-dev/DotNetVidSrc/releases/latest)
+and add its folder as a local feed.
 
 ## Usage
 
