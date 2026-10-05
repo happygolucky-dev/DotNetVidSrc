@@ -9,7 +9,7 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
 
     <PackageId>DotNetVidSrc</PackageId>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <Description>.NET API wrapper for VidSrc (vidsrc.sh): embed URL builder, content info, latest-content and ID-list endpoints.</Description>
     <Authors>HappyGoLucky Dev</Authors>
     <PackageProjectUrl>https://github.com/happygolucky-dev/DotNetVidSrc</PackageProjectUrl>

@@ -8,6 +8,7 @@ on:
 permissions:
   contents: write   # create the GitHub release
   packages: write   # push to GitHub Packages
+  id-token: write   # OIDC token for nuget.org Trusted Publishing
 
 jobs:
   release:
@@ -29,6 +30,21 @@ jobs:
           dotnet nuget push artifacts/*.nupkg \
             --source "https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json" \
             --api-key ${{ secrets.GITHUB_TOKEN }} \
+            --skip-duplicate
+
+      # nuget.org via Trusted Publishing (OIDC) — no API key secret needed.
+      # Registered at nuget.org → Account → Trusted Publishing for this repo/workflow.
+      - name: NuGet login (OIDC)
+        uses: NuGet/login@v1
+        id: nuget-login
+        with:
+          user: dev.happygolucky
+
+      - name: Push to NuGet.org
+        run: |
+          dotnet nuget push artifacts/*.nupkg \
+            --source https://api.nuget.org/v3/index.json \
+            --api-key ${{ steps.nuget-login.outputs.NUGET_API_KEY }} \
             --skip-duplicate
 
       - name: Create GitHub release
